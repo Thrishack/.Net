@@ -1,0 +1,24 @@
+﻿@page
+@model Databinding.Pages.DatabindingModel
+<h2>Data binding</h2>
+<form method="post">
+    Name:
+    <input asp-for="Person.Name" />
+    Age:
+    <input asp-for="Person.Age" />
+    City:
+    <input asp-for="Person.City" />
+    <button type="submit">Submit</button>
+
+</form>
+@if (Model.Result != null)
+{
+    <h3>Submitted Data:</h3>
+    <ul>
+        <li>Name: @Model.Person.Name</li>
+        <li>City: @Model.Person.City</li>
+        <li>Age: @Model.Person.Age</li>
+    </ul>
+   
+}
+
